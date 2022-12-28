@@ -251,6 +251,7 @@ h4 {
 
 .project-card {
     background-color: white;
+    box-shadow: inset 6px 0 #fef08a;
     padding: 20px;
     border-radius: 10px;
 }
@@ -307,5 +308,9 @@ h4 {
 .trend-info {
     display: flex;
     flex-direction: column;
+}
+
+.trend-info > span:first-of-type {
+    font-weight: bold;
 }
 /*end main area*/
