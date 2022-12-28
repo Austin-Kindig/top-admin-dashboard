@@ -22,7 +22,7 @@
                 </div>
                 <div class="right-side">
                     <img src="./images/bell.svg" alt="bell icon">
-                    <img src="./images/user.svg" alt="avatar">
+                    <img class="avatar" src="./images/user.svg" alt="avatar">
                     <span class="user-name">Austin Kindig</span>
                 </div>
             </div>
@@ -30,8 +30,8 @@
                 <div class="left-side">
                     <img src="./images/user.svg" alt="avatar">
                     <div class="user-name-main">
-                        <span>Hi there,</span>
-                        <span>Austin Kindig (@austin)</span>
+                        <span id="greeting">Hi there,</span>
+                        <span id="user-name">Austin Kindig (@austin)</span>
                     </div>
                 </div>
                 <div class="right-side">
@@ -78,7 +78,7 @@
                     <div class="project-card">
                         <div class="text-area">
                             <h4>Title</h4>
-                            <p>Lorem ipsum</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                         <div class="link-row">
                             <img src="./images/star.svg" alt="star icon" class="star">
@@ -89,7 +89,7 @@
                     <div class="project-card">
                         <div class="text-area">
                             <h4>Title</h4>
-                            <p>Lorem ipsum</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                         <div class="link-row">
                             <img src="./images/star.svg" alt="star icon" class="star">
@@ -100,7 +100,7 @@
                     <div class="project-card">
                         <div class="text-area">
                             <h4>Title</h4>
-                            <p>Lorem ipsum</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                         <div class="link-row">
                             <img src="./images/star.svg" alt="star icon" class="star">
@@ -111,7 +111,7 @@
                     <div class="project-card">
                         <div class="text-area">
                             <h4>Title</h4>
-                            <p>Lorem ipsum</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                         <div class="link-row">
                             <img src="./images/star.svg" alt="star icon" class="star">
@@ -122,7 +122,7 @@
                     <div class="project-card">
                         <div class="text-area">
                             <h4>Title</h4>
-                            <p>Lorem ipsum</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                         <div class="link-row">
                             <img src="./images/star.svg" alt="star icon" class="star">
@@ -133,7 +133,7 @@
                     <div class="project-card">
                         <div class="text-area">
                             <h4>Title</h4>
-                            <p>Lorem ipsum</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                         <div class="link-row">
                             <img src="./images/star.svg" alt="star icon" class="star">
@@ -146,50 +146,42 @@
             <div class="announcements">
                 <h3>Announcements</h3>
                 <div class="announcements-card">
-                    <div class="announcement">
+                    <div id="announcement-one">
                         <h4>Site Maintenance</h4>
-                        <p>Lorem ipsum</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
-                    <div class="announcement">
+                    <div id="announcement-two">
                         <h4>Community Share Day</h4>
-                        <p>Lorem ipsum</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
-                    <div class="announcement">
+                    <div id="announcement-three">
                         <h4>Updated Privacy Policy</h4>
-                        <p>Lorem ipsum</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
             </div>
             <div class="trending">
                 <h3>Trending</h3>
                 <div class="trending-card">
-                    <div class="trending-item">
-                        <img src="./images/user.svg" alt="trending icon">
-                        <div class="trend-info">
-                            <span>@tegan</span>
-                            <span>World Peace Builder</span>
-                        </div>
+                    <img class="avatar" src="./images/user.svg" alt="trending icon">
+                    <div class="trend-info">
+                        <span>@tegan</span>
+                        <span>World Peace Builder</span>
                     </div>
-                    <div class="trending-item">
-                        <img src="./images/user.svg" alt="trending icon">
-                        <div class="trend-info">
-                            <span>@morgan</span>
-                            <span>Super Cool Project</span>
-                        </div>
+                    <img class="avatar" src="./images/user.svg" alt="trending icon">
+                    <div class="trend-info">
+                        <span>@morgan</span>
+                        <span>Super Cool Project</span>
                     </div>
-                    <div class="trending-item">
-                        <img src="./images/user.svg" alt="trending icon">
-                        <div class="trend-info">
-                            <span>@kendall</span>
-                            <span>Life Changing App</span>
-                        </div>
+                    <img class="avatar" src="./images/user.svg" alt="trending icon">
+                    <div class="trend-info">
+                        <span>@kendall</span>
+                        <span>Life Changing App</span>
                     </div>
-                    <div class="trending-item">
-                        <img src="./images/user.svg" alt="trending icon">
-                        <div class="trend-info">
-                            <span>@alex</span>
-                            <span>No Traffic Maker</span>
-                        </div>
+                    <img class="avatar" src="./images/user.svg" alt="trending icon">
+                    <div class="trend-info">
+                        <span>@alex</span>
+                        <span>No Traffic Maker</span>
                     </div>
                 </div>
             </div>

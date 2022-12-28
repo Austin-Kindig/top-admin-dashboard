@@ -12,6 +12,7 @@ img {
 form > button {
     border: none;
     background: transparent;
+    padding: 0;
 }
 
 ul {
@@ -22,6 +23,21 @@ a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+}
+
+p {
+    display: -webkit-box !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: max-content;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    margin-top: 2px;
+}
+
+h4 {
+    margin-bottom: 0;
 }
 
 
@@ -40,24 +56,121 @@ a {
     grid-column: 2;
     grid-row: 1;
     background-color: white;
+    padding: 1% 3% 0;
 }
-.search-row {
-
-}
-
-.button-row {
-
+.search-row, .button-row {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
 }
 
-.button-row > .left-side {
+.search-row .left-side, .button-row .left-side {
+    grid-column: 1;
     display: flex;
+    justify-content: left;
+    align-items: center;
+    column-gap: 25px;
 }
+
+.search-row .right-side, .button-row .right-side {
+    grid-column: 2;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.search-row form {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+#search {
+    border-radius: 15px;
+    border: 0;
+    height: 25px;
+    width: clamp(50px, 225%, 700px);
+    background-color: #e0f2fe;
+    padding: 1px 10px;
+}
+
+#search:focus {
+    box-shadow: 1% 1% 1% 1% #e0f2fe;
+}
+
+.avatar {
+    height: 100%;
+    width: 13%;
+}
+
+.search-row span {
+    font-weight: bold;
+}
+
+.button-row img {
+    height: 100%;
+    width: 15%;
+}
+#greeting {
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+#user-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
 .user-name-main {
     display: flex;
     flex-direction: column;
 }
 .right-side > ul {
     display: flex;
+    column-gap: 20px;
+}
+
+.right-side button {
+  align-items: center;
+  appearance: none;
+  background-color: #0284c7;
+  background-image: linear-gradient(1deg, #0284c7, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.right-side button:active,
+.right-side button:focus {
+  outline: none;
+}
+
+.right-side button:hover {
+  background-position: -20px -20px;
+}
+
+.right-side button:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
 }
 /*end header area*/
 
@@ -65,7 +178,7 @@ a {
 .sidebar {
     grid-column: 1;
     grid-row: 1 / 3;
-    background-color: blue;
+    background-color: #0284c7;
     display: grid;
     grid-template-rows: 1fr 4fr 2fr 50%;
     gap: 50px;
@@ -79,8 +192,8 @@ a {
 }
 
 #logo {
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: clamp(40px, 80%, 100px);
 }
 
 .logo {
@@ -117,7 +230,8 @@ a {
 .cards {
     grid-column: 2;
     grid-row: 2;
-    background-color: lightblue;
+    padding: 5px 20px;
+    background-color: #e0f2fe;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -126,6 +240,7 @@ a {
 .projects {
     grid-column: 1;
     grid-row: 1 / 3;
+    margin-right: 20px;
 }
 
 .project-cards {
@@ -136,6 +251,14 @@ a {
 
 .project-card {
     background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.link-row {
+    display: flex;
+    justify-content: right;
+    column-gap: 25px;
 }
 
 .announcements {
@@ -143,9 +266,46 @@ a {
     grid-row: 1;
 }
 
+.announcements-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#announcement-one, #announcement-two {
+    border-bottom:1px solid #e0f2fe ;
+}
+
+#announcement-one h4 {
+    margin-top: 0;
+}
+
+#announcement-three p {
+    margin-bottom: 0;
+}
+
 .trending {
     grid-column: 2;
     grid-row: 2;
 }
 
+.trending-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+}
+
+.trending-card .avatar {
+    height: 100%;
+    width: 75%;
+}
+
+.trend-info {
+    display: flex;
+    flex-direction: column;
+}
 /*end main area*/
